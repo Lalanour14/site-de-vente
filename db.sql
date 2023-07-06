@@ -74,11 +74,11 @@ INSERT INTO `order` (createdAt,CustomerName)
 
 VALUES
 
-(1974-12-20,'Alice Baker'),
+('1974-12-20 23:59:59','Alice Baker'),
 
-(1990-02-22,'Anne Roberts'),
+('1990-02-22 23:59:59','Anne Roberts'),
 
-(1998-06-22,'Mackenzi Jean');
+('1998-06-22 23:59:59','Mackenzi Jean');
 
 
 
@@ -96,7 +96,7 @@ VALUES
 
 
 
-INSERT INTO option (label,price)
+INSERT INTO `option` (label,price)
 
 VALUES
 
