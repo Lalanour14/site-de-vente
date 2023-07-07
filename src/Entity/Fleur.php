@@ -11,27 +11,15 @@ class Fleur
     private float $basePrice;
     private string $description;
     private string $picture;
-    private ?int $id;
-
-
-
-public function __construct(string $label,
-float $basePrice,
-string $description,
-string $picture,
-?int $id
-
-) {
-    $this->label = $label;
-    $this->basePrice = $basePrice;
-    $this->description = $description;
-    $this->picture = $picture;
-    $this->id = $id;
-
-}
-
-
-
+    private ?int $id = null;
+    public function __construct(string $label, float $basePrice, string $description, string $picture, int $id)
+    {
+        $this->label = $label;
+        $this->basePrice = $basePrice;
+        $this->description = $description;
+        $this->picture = $picture;
+        $this->id = $id;
+    }
 
 	/**
 	 * @return string

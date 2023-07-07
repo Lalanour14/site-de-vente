@@ -7,6 +7,13 @@ class OrderItemOption
     private ?int $idOption = null;
     private ?int $id = null;
 
+	public function __construct(int $idOrderItem, int $idOption, int $id)
+    {
+        $this->idOrderItem = $idOrderItem;
+        $this->idOption = $idOption;
+        $this->id = $id;
+    }
+
 	/**
 	 * @return 
 	 */

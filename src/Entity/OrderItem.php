@@ -9,6 +9,15 @@ class OrderItem
     private ?int $idFleur = null;
     private ?int $id = null;
 
+	public function __construct(int $quantity, float $itemPrice, int $idOrder, int $idFleur, int $id)
+    {
+        $this->quantity = $quantity;
+        $this->itemPrice = $itemPrice;
+        $this->idOrder = $idOrder;
+        $this->idFleur = $idFleur;
+        $this->id = $id;
+    }
+
 	/**
 	 * @return int
 	 */
