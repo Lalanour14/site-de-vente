@@ -8,6 +8,13 @@ class Order
     private string $customerName;
     private ?int $id = null;
 
+	public function __construct(DateTime $createdAt, string $customerName, int $id)
+    {
+        $this->createdAt = $createdAt;
+        $this->customerName = $customerName;
+        $this->id = $id;
+    }
+
 	/**
 	 * @return DateTime
 	 */

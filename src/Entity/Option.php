@@ -7,6 +7,13 @@ class Option
     private ?float $price = null;
     private ?int $id = null;
 
+	public function __construct(string $label, float $price, int $id)
+    {
+        $this->label = $label;
+        $this->price = $price;
+        $this->id = $id;
+    }
+
 	/**
 	 * @return string
 	 */

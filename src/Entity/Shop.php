@@ -7,6 +7,13 @@ class Shop
     private string $address;
     private ?int $id = null;
 
+	public function __construct(string $name, string $address, int $id)
+    {
+        $this->name = $name;
+        $this->address = $address;
+        $this->id = $id;
+    }
+
 
 	/**
 	 * @return string

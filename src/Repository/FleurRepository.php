@@ -27,4 +27,21 @@ class FleurRepository
         }
         return $list;
     }
+    public function findById(int $id): ?Fleur {
+        $connection = Database::getConnection();
+        $query = $connection->prepare("SELECT * FROM fleur WHERE id = :id");
+        $query->bindValue(":id", $id);
+        $query->execute();
+    
+        $line = $query->fetch();
+    
+        if ($line) {
+            return new Fleur(
+                $line['name'], $line['basePrice'], $line['description'], $line['id']
+            );
+        }
+    
+        return null;
+    }
+    
 }
