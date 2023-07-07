@@ -4,7 +4,7 @@ namespace App\Entity;
 class Option
 {
     private string $label;
-    private ?float $price = null;
+    private ?float $price;
     private ?int $id = null;
 
 	public function __construct(string $label, float $price, int $id)
