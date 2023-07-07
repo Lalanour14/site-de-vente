@@ -4,8 +4,17 @@ namespace App\Entity;
 class Option
 {
     private string $label;
-    private ?float $price = null;
+   
+    private ?float $price;
     private ?int $id = null;
+
+	public function __construct(string $label, float $price, ?int $id=null)
+    {
+        $this->label = $label;
+        $this->price = $price;
+        $this->id = $id;
+    }
+	
 
 	/**
 	 * @return string
@@ -24,14 +33,14 @@ class Option
 	}
 	
 	/**
-	 * @return 
+	 * @return float|null
 	 */
 	public function getPrice(): ?float {
 		return $this->price;
 	}
 	
 	/**
-	 * @param  $price 
+	 * @param float|null $price 
 	 * @return self
 	 */
 	public function setPrice(?float $price): self {
@@ -40,14 +49,14 @@ class Option
 	}
 	
 	/**
-	 * @return 
+	 * @return int|null
 	 */
 	public function getId(): ?int {
 		return $this->id;
 	}
 	
 	/**
-	 * @param  $id 
+	 * @param int|null $id 
 	 * @return self
 	 */
 	public function setId(?int $id): self {
