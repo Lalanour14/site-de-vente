@@ -1,7 +1,7 @@
 <?php
 namespace App\Repository;
 
-use App\entity\Fleur;
+use App\Entity\Fleur;
 
 
 class FleurRepository
